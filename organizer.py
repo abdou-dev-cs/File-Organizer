@@ -45,22 +45,23 @@ def organize_folder(folder_path):
     ]
 
     for file in files:
-
+        # We get all extensions of all files
         extension = Path(file).suffix.lower()
-
+        # We get the correct category
         category = get_category(extension)
-
+        # We add the category to the path to get the destination path (1)
         category_folder = os.path.join(folder_path, category)
-
+        # We creat the folder in the specified path
         create_folder(category_folder)
-
+        # We add the the file to the path to get the file we want to move (2)
         source = os.path.join(folder_path, file)
-
+        # Mix (1) and (2)
         destination = os.path.join(category_folder, file)
-
+        # Move the file
         move_file(source, destination)
 
 
-folder = input("Enter folder path that you wish to be organized: ")
-organize_folder(folder)
-print("Folder organized successfully!")
+if __name__ == "main":
+    folder = input("Enter folder path that you wish to be organized: ")
+    organize_folder(folder)
+    print("Folder organized successfully!")

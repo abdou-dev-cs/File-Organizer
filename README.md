@@ -13,15 +13,30 @@ A Python automation tool that automatically organizes files into categorized fol
 
 ## Supported Categories
 
-| Category     | Extensions              |
-| ------------ | ----------------------- |
-| Images       | .jpg, .jpeg, .png, .gif |
-| Documents    | .pdf, .docx, .txt       |
-| Music        | .mp3                    |
-| Videos       | .mp4, .avi, .mkv        |
-| Archives     | .zip, .rar              |
-| Python Files | .py                     |
-| Spreadsheets | .xlsx, .csv             |
+| Category            | Extensions |
+| ------------------- | ---------- |
+| Images              | .jpg, .jpeg, .png, .gif, .bmp, .webp, .svg, .tiff, .tif, .ico, .heic, .heif, .raw, .psd, .ai, .eps, .avif |
+| PDF                 | .pdf |
+| Word Documents      | .doc, .docx, .odt, .rtf |
+| Text Files          | .txt, .md, .tex, .log |
+| PowerPoint          | .ppt, .pptx, .pptm, .odp, .key |
+| Spreadsheets        | .xls, .xlsx, .xlsm, .xlsb, .csv, .tsv, .ods |
+| Music               | .mp3, .wav, .aac, .flac, .ogg, .wma, .m4a, .opus, .mid, .midi, .aiff |
+| Videos              | .mp4, .avi, .mkv, .mov, .wmv, .webm, .m4v, .flv, .3gp, .mpeg, .mpg, .ts, .mts |
+| Archives            | .zip, .rar, .7z, .tar, .gz, .bz2, .xz, .tgz, .iso, .cab, .zst |
+| Python Files        | .py, .pyc, .ipynb |
+| Flutter             | .dart |
+| Flutter / Dart      | .dart |
+| Programming Files   | .java, .class, .kt, .js, .jsx, .ts, .tsx, .php, .html, .css, .scss, .c, .cpp, .h, .hpp, .cs, .go, .rs, .rb, .swift, .vue, .sh, .bat, .ps1 |
+| Databases           | .db, .sql, .sqlite, .sqlite3, .db3, .mdb, .accdb, .fdb, .gdb, .nsf, .pdb, .sdf, .sqlite2, .sqlite4, .dbf, .parquet, .bson, .rdb |
+| Executables         | .exe, .msi, .dll, .sys, .app, .deb, .rpm, .apk, .aab |
+| Fonts               | .ttf, .otf, .woff, .woff2 |
+| 3D Models           | .obj, .stl, .fbx, .blend, .gltf, .glb |
+| Configuration Files | .ini, .cfg, .conf, .toml, .env, .json, .yaml, .yml, .xml |
+| E-books             | .epub, .mobi |
+| Virtual Machines    | .vmdk, .vdi, .vhd, .vhdx, .ova |
+
+**Note:** Files with unsupported or unrecognized extensions are automatically categorized as `Others`.
 
 ## Project Structure
 

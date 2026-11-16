@@ -1,29 +1,157 @@
+import os
 import shutil
 from pathlib import Path
-import os
 
 
 def get_category(extension):
-    if extension in [".jpg", ".png", ".jpeg"]:
-        return "Images"
 
-    elif extension in [".pdf", ".docx", ".txt"]:
-        return "Documents"
+    categories = {
+        "Images": [
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".gif",
+            ".bmp",
+            ".webp",
+            ".svg",
+            ".tiff",
+            ".tif",
+            ".ico",
+            ".heic",
+            ".heif",
+            ".raw",
+            ".psd",
+            ".ai",
+            ".eps",
+            ".avif",
+        ],
+        "PDF": [".pdf"],
+        "Word": [".doc", ".docx", ".odt", ".rtf"],
+        "Text": [".txt", ".md", ".tex", ".log"],
+        "PowerPoint": [".ppt", ".pptx", ".pptm", ".odp", ".key"],
+        "Spreadsheets": [".xls", ".xlsx", ".xlsm", ".xlsb", ".csv", ".tsv", ".ods"],
+        "Music": [
+            ".mp3",
+            ".wav",
+            ".aac",
+            ".flac",
+            ".ogg",
+            ".wma",
+            ".m4a",
+            ".opus",
+            ".mid",
+            ".midi",
+            ".aiff",
+        ],
+        "Videos": [
+            ".mp4",
+            ".avi",
+            ".mkv",
+            ".mov",
+            ".wmv",
+            ".webm",
+            ".m4v",
+            ".flv",
+            ".3gp",
+            ".mpeg",
+            ".mpg",
+            ".ts",
+            ".mts",
+        ],
+        "Archives": [
+            ".zip",
+            ".rar",
+            ".7z",
+            ".tar",
+            ".gz",
+            ".bz2",
+            ".xz",
+            ".tgz",
+            ".iso",
+            ".cab",
+            ".zst",
+        ],
+        "Python": [".py", ".pyc", ".ipynb"],
+        "Flutter": [".dart"],
+        "Programming": [
+            ".java",
+            ".class",
+            ".kt",
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx",
+            ".php",
+            ".html",
+            ".css",
+            ".scss",
+            ".c",
+            ".cpp",
+            ".h",
+            ".hpp",
+            ".cs",
+            ".go",
+            ".rs",
+            ".rb",
+            ".swift",
+            ".vue",
+            ".sh",
+            ".bat",
+            ".ps1",
+        ],
+        "Databases": [
+            ".db",
+            ".sql",
+            ".sqlite",
+            ".sqlite3",
+            ".db3",
+            ".mdb",
+            ".accdb",
+            ".fdb",
+            ".gdb",
+            ".nsf",
+            ".pdb",
+            ".sdf",
+            ".sqlite2",
+            ".sqlite4",
+            ".dbf",
+            ".parquet",
+            ".bson",
+            ".rdb",
+        ],
+        "Executables": [
+            ".exe",
+            ".msi",
+            ".dll",
+            ".sys",
+            ".app",
+            ".deb",
+            ".rpm",
+            ".apk",
+            ".aab",
+        ],
+        "Fonts": [".ttf", ".otf", ".woff", ".woff2"],
+        "3D Models": [".obj", ".stl", ".fbx", ".blend", ".gltf", ".glb"],
+        "Configuration": [
+            ".ini",
+            ".cfg",
+            ".conf",
+            ".toml",
+            ".env",
+            ".json",
+            ".yaml",
+            ".yml",
+            ".xml",
+        ],
+        "Ebooks": [".epub", ".mobi"],
+        "Virtual Machines": [".vmdk", ".vdi", ".vhd", ".vhdx", ".ova"],
+    }
 
-    elif extension == ".mp3":
-        return "Music"
+    extension = extension.lower()
 
-    elif extension in [".mp4", ".avi", ".mkv"]:
-        return "Videos"
-
-    elif extension in [".zip", ".rar"]:
-        return "Archives"
-
-    elif extension == ".py":
-        return "Python"
-
-    elif extension in [".xlsx", ".csv"]:
-        return "Spreadsheets"
+    for category, extensions in categories.items():
+        if extension in extensions:
+            return category
 
     return "Others"
 

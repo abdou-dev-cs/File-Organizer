@@ -73,6 +73,17 @@ Example:
 Enter folder path: D:\Downloads
 ```
 
+> [!WARNING]
+> **Important: Avoid Using the Root of the C: Drive**
+>
+> When running this script, **DO NOT provide `C:\` (the root of your system drive) as the target directory.**
+>
+> The script automatically organizes files by moving them into categorized folders. Running it on the root of your system drive may move important system files, application files, or other critical data, potentially causing system errors or unexpected behavior.
+>
+> **Recommended:** Always use a specific folder or directory containing files you want to organize (e.g., `C:\Users\YourName\Downloads` or `D:\MyFiles`).
+>
+> **Safety First:** Use this tool only on directories you have explicitly selected and whose contents you are comfortable reorganizing.
+
 The program will automatically create the necessary folders and move files into their corresponding categories.
 
 ## Technologies Used
